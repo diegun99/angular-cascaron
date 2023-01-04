@@ -12,4 +12,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  cambiarMensaje() {
+     console.log("cambio nombre")
+  }
+
 }
