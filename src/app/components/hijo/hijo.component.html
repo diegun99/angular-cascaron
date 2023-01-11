@@ -1,1 +1,16 @@
-<p>hijo works!</p>
+<h3>hijo component</h3>
+<hr>
+<!-- <h5>{{mensajeHijo}}</h5> -->
+<!-- pipe async automaticamente llama el unsubscribe ,  -->
+<!-- <h5>{{dataService.nombre$ | async }}</h5>   -->
+
+<!-- tambien se puede colocar en una directiva para validar en caso de que no haya info woww ,  -->
+<h5 *ngIf="dataService.nombre$ | async as nombre; else sinData"><!-- dentro del scope del ngif se puede usar el alias,, en caso de que no haya data se declara un valor para mostrar con el ng-template  -->
+
+    {{nombre}}
+</h5>
+
+
+<ng-template #sinData>
+    no hay imformacion
+</ng-template>

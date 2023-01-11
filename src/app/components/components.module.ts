@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HijoComponent } from './hijo/hijo.component';
+import { DataService } from '../services/data.service';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,7 +17,9 @@ import { HijoComponent } from './hijo/hijo.component';
     HijoComponent
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    RouterModule
+  ],
+  providers: [DataService]
 })
 export class ComponentsModule { }
